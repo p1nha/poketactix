@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="/css/estilosOnline.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PokeTactix</title>
+    <link rel="shortcut icon" href="../archivos/titulo/PTX_icon.png">
+  </head>
+
+  <body>
+    <a class="logo" href="index.html">
+      <img src="./archivos/titulo/PokeTactix.png" alt="">
+    </a>
+    <div id="lobby">
+      <div id="searchPanel">
+        <input type="text" id="playerName" placeholder="Tu nombre">
+        <button id="searchButton">Buscar Partida</button>
+        <img src="./archivos/loading.png" id="loading" style="display: none;">
+      </div>
+
+      <div id="gameInfo" style="display: none;">
+        <p>Jugador: <span id="playerColor"></span></p>
+        <p>Oponente: <span id="opponentName"></span></p>
+        <p id="turnDisplay">Turno actual: <span id="currentTurn"></span></p>
+      </div>
+    </div>
+    <div id="gameArea" hidden>
+
+      <div id="divcentral">
+        <div id="informacion">
+          <h1><div id="turnoMensaje">Turno del azul</div></h1>
+        </div>
+        <table id="tablaTipos" >
+          <tr>
+            <td id="cell1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell2" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell3" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell4" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell5" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell6" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          <tr>
+            <td id="cell7" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell8" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell9" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell10" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell11" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell12" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell13" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell14" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell15" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell16" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell17" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell18" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell19" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell20" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell21" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell22" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell23" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell24" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell25" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell26" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell27" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell28" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell29" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell30" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell31" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell32" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell33" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell34" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell35" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+            <td id="cell36" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="endAllowDrop(event)"></td>
+          </tr>
+          </tr>
+        </table>
+        <div>
+          <button id="toggleButton">No recuerdas la tabla de tipos? Click aquí!</button>
+
+          <div id="imagenPopup" class="popup">
+            <span class="cruz">&times;</span>
+            <img src="../archivos/debilidades.png" alt="Imagen pop-up">
+          </div>
+        </div>
+      </div>
+      <table id="tablaRoja" align="center">
+        <tr>
+          <td> <img src="/archivos/elementos/fuegorojo.png" class="red fuego" id="fuegoRojo" alt="firered" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/aguarojo.png" class="red agua" id="aguaRojo" alt="waterred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/bichorojo.png" class="red bicho" id ="bichoRojo" alt="bugred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"> </td>
+          <td> <img src="/archivos/elementos/electricorojo.png" class="red electrico" id="electricoRojo" alt="electricred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/acerorojo.png" class="red acero" id="aceroRojo" alt="steelred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/hielorojo.png" class="red hielo" id="hieloRojo" alt="icered" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img src="/archivos/elementos/lucharojo.png" class="red lucha" id="luchaRojo" alt="fightred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/normalrojo.png" class="red normal" id ="normalRojo" alt="normalred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/siniestrorojo.png" class="red siniestro" id="siniestroRojo" alt="darkred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+          </td>
+          <td> <img src="/archivos/elementos/psiquicorojo.png" class="red psiquico" id="psiquicoRojo" alt="psychicred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+          </td>
+          <td> <img src="/archivos/elementos/tierrarojo.png" class="red tierra" id="tierraRojo" alt="dirtred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/fantasmarojo.png" class="red fantasma" id="fantasmaRojo" alt="ghostred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+          </td>
+          <td> <img src="/archivos/elementos/venenorojo.png" class="red veneno" id="venenoRojo" alt="poisonred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/dragonrojo.png" class="red dragon" id="dragonRojo" alt="dragonred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/rocarojo.png" class="red roca" id="rocaRojo" alt="rockred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img src="/archivos/elementos/plantarojo.png" class="red planta" id="plantaRojo" alt="grassred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/hadarojo.png" class="red hada" id="hadaRojo" alt="fairyred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img src="/archivos/elementos/voladorrojo.png" class="red volador" id="voladorRojo" alt="flyingred" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+          </td>
+        </tr>
+      </table>
+      <table align="center" id="tablaAzul">
+        <tr>
+          <td><img  src="/archivos/elementos/fuegoazul.png" class="blue fuego" id="fuegoAzul" alt="fireblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/aguaazul.png" class="blue agua" id="aguaAzul" alt="waterblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/bichoazul.png" class="blue bicho" id="bichoAzul" alt="bugblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/electricoazul.png" class="blue electrico" id="electricoAzul" alt="electricblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/aceroazul.png" class="blue acero" id="aceroAzul" alt="steelblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/hieloazul.png" class="blue hielo" id="hieloAzul" alt="iceblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/luchaazul.png" class="blue lucha" id="luchaAzul" alt="fightblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/normalazul.png" class="blue normal" id="normalAzul" alt="normalblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/siniestroazul.png" class="blue siniestro" id="siniestroAzul" alt="darkblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td> <img  src="/archivos/elementos/psiquicoazul.png" class="blue psiquico" id="psiquicoAzul" alt="psychicblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/tierraazul.png" class="blue tierra" id="tierraAzul" alt="dirtblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/fantasmaazul.png" class="blue fantasma" id="fantasmaAzul" alt="ghostblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/venenoazul.png" class="blue veneno" id="venenoAzul" alt="poisonblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/dragonazul.png" class="blue dragon" id="dragonAzul" alt="dragonblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/rocaazul.png" class="blue roca" id="rocaAzul" alt="rockblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/plantaazul.png" class="blue planta" id="plantaAzul" alt="grassblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/hadaazul.png" class="blue hada" id="hadaAzul" alt="fairyblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+          <td><img  src="/archivos/elementos/voladorazul.png" class="blue volador" id="voladorAzul" alt="flyingblue" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/online.js"></script>
+</html>

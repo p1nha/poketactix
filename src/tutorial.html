@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="/css/tutorial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeTactix</title>
+    <link rel="shortcut icon" href="../archivos/titulo/PTX_icon.png">
+  </head>
+
+  <body>
+
+    <body>
+
+      <div id="overlayBlanco" class="noActive"></div>
+      <div id="overlayBlancoInicio" class="Active"></div>
+      <div id="overlay" class="active"></div>
+
+      <table id="tablaRoja" align="center">
+        <tr>
+          <td> <img src="../archivos/elementos/fuegorojo.png" class="red fuego" id="fuegoRojo" alt="firered" draggable="false"
+            ondragstart="arrastrar(event)" ondragend="buscarNumero(event)"></td>
+          <td> <img src="../archivos/elementos/aguarojo.png" class="red agua" id="aguaRojo" alt="waterred" draggable="false"
+            ondragstart="arrastrar(event)" ondragend="buscarNumero(event)"></td>
+          <td> <img src="../archivos/elementos/bichorojo.png" class="red bicho" id="bichoRojo" alt="bugred" draggable="false"> </td>
+          <td> <img src="../archivos/elementos/electricorojo.png" class="red electrico" id="electricoRojo" alt="electricred"></td>
+          <td> <img src="../archivos/elementos/acerorojo.png" class="red acero" id="aceroRojo" alt="steelred" draggable="false"></td>
+          <td> <img src="../archivos/elementos/hielorojo.png" class="red hielo" id="hieloRojo" alt="icered" draggable="false"></td>
+          <td><img src="../archivos/elementos/lucharojo.png" class="red lucha" id="luchaRojo" alt="fightred" draggable="false"></td>
+          <td> <img src="../archivos/elementos/normalrojo.png" class="red normal" id="normalRojo" alt="normalred"></td>
+          <td> <img src="../archivos/elementos/siniestrorojo.png" class="red siniestro" id="siniestroRojo" alt="darkred">
+          </td>
+          <td> <img src="../archivos/elementos/psiquicorojo.png" class="red psiquico" id="psiquicoRojo" alt="psychicred">
+          </td>
+          <td> <img src="../archivos/elementos/tierrarojo.png" class="red tierra" id="tierraRojo" alt="dirtred" draggable="false"
+            ondragstart="arrastrar(event)" ondragend="buscarNumero(event)"></td>
+          <td> <img src="../archivos/elementos/fantasmarojo.png" class="red fantasma" id="fantasmaRojo" alt="ghostred">
+          </td>
+          <td> <img src="../archivos/elementos/venenorojo.png" class="red veneno" id="venenoRojo" alt="poisonred"></td>
+          <td> <img src="../archivos/elementos/dragonrojo.png" class="red dragon" id="dragonRojo" alt="dragonred"></td>
+          <td> <img src="../archivos/elementos/rocarojo.png" class="red roca" id="rocaRojo" alt="rockred" draggable="false"
+            ondragstart="arrastrar(event)" ondragend="buscarNumero(event)"></td>
+          <td><img src="../archivos/elementos/plantarojo.png" class="red planta" id="plantaRojo" alt="grassred" draggable="false">
+          </td>
+          <td> <img src="../archivos/elementos/hadarojo.png" class="red hada" id="hadaRojo" alt="fairyred"></td>
+          <td> <img src="../archivos/elementos/voladorrojo.png" class="red volador" id="voladorRojo" alt="flyingred">
+          </td>
+        </tr>
+      </table>
+      <div id="divcentral">
+        <button id="saltar">Saltar tutorial</button>
+        <table id="tablaTipos" align="center">
+
+
+          <tr>
+            <td id="cell1"></td>
+            <td id="cell2"></td>
+            <td id="cell3"></td>
+            <td id="cell4"></td>
+            <td id="cell5"></td>
+            <td id="cell6"></td>
+          </tr>
+          <tr>
+            <td id="cell7"></td>
+            <td id="cell8"></td>
+            <td id="cell9" class="quemar" ></td>
+            <td id="cell10"></td>
+            <td id="cell11"></td>
+            <td id="cell12"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell13" ></td>
+            <td id="cell14" class="quemar" ></td>
+            <td id="cell15" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+            <td id="cell16" class="quemar" ></td>
+            <td id="cell17" ></td>
+            <td id="cell18" ></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell19" ></td>
+            <td id="cell20" ></td>
+            <td id="cell21" class="quemar" ></td>
+            <td id="cell22" ></td>
+            <td id="cell23" ></td>
+            <td id="cell24" ></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell25"></td>
+            <td id="cell26"></td>
+            <td id="cell27"></td>
+            <td id="cell28"></td>
+            <td id="cell29"></td>
+            <td id="cell30"></td>
+          </tr>
+          </tr>
+          <tr>
+            <td id="cell31"></td>
+            <td id="cell32"></td>
+            <td id="cell33"></td>
+            <td id="cell34"></td>
+            <td id="cell35"></td>
+            <td id="cell36"></td>
+          </tr>
+          </tr>
+        </table>
+      </div>
+      <table align="center" id="tablaAzul">
+        <tr>
+          <td><img src="../archivos/elementos/fuegoazul.png" class="blue fuego" id="fuegoAzul" alt="fireblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/aguaazul.png" class="blue agua" id="aguaAzul" alt="waterblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/bichoazul.png" class="blue bicho" id="bichoAzul" alt="bugblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/electricoazul.png" class="blue electrico" id="electricoAzul" alt="electricblue"
+            draggable="true"></td>
+          <td> <img src="../archivos/elementos/aceroazul.png" class="blue acero" id="aceroAzul" alt="steelblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/hieloazul.png" class="blue hielo" id="hieloAzul" alt="iceblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/luchaazul.png" class="blue lucha" id="luchaAzul" alt="fightblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/normalazul.png" class="blue normal" id="normalAzul" alt="normalblue" draggable="true"
+          ></td>
+          <td> <img src="../archivos/elementos/siniestroazul.png" class="blue siniestro" id="siniestroAzul" alt="darkblue"
+            draggable="true"></td>
+          <td> <img src="../archivos/elementos/psiquicoazul.png" class="blue psiquico" id="psiquicoAzul" alt="psychicblue"
+            draggable="true"></td>
+          <td><img src="../archivos/elementos/tierraazul.png" class="blue tierra" id="tierraAzul" alt="dirtblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/fantasmaazul.png" class="blue fantasma" id="fantasmaAzul" alt="ghostblue"
+            draggable="true"></td>
+          <td><img src="../archivos/elementos/venenoazul.png" class="blue veneno" id="venenoAzul" alt="poisonblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/dragonazul.png" class="blue dragon" id="dragonAzul" alt="dragonblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/rocaazul.png" class="blue roca" id="rocaAzul" alt="rockblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/plantaazul.png" class="blue planta" id="plantaAzul" alt="grassblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/hadaazul.png" class="blue hada" id="hadaAzul" alt="fairyblue" draggable="true"
+          ></td>
+          <td><img src="../archivos/elementos/voladorazul.png" class="blue volador" id="voladorAzul" alt="flyingblue" draggable="true"
+          ></td>
+        </tr>
+      </table>
+      <img src="../archivos/sprites/red1.png" class="noOscurecer" id="red" alt="">
+      <div class="noOscurecer" id="cajaDialogo">
+        <audio id="typeSound" src="../archivos/audios/Dialogo.mp3"></audio>
+        <audio id="sonidoFinal" src="../archivos/audios/CurarPokemon.mp3"></audio>
+
+        <p id="dialogText"></p>
+        <span id="triangulo" class="hidden">▼</span>
+      </div>
+    </body>
+    <script src="js/cajaTexto.js"></script>
+
+
+
+</html>
